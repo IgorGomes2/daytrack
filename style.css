@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    min-height: 100vh;
+    background-color: #151c19;
+    color: #e8f0eb;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0 8px;
+    color: #a7d7b5;
+    font-size: 32px;
+}
+
+body::before {
+    content: "Organização da casa, sem complicação";
+    display: block;
+    text-align: center;
+    color: #a4b7aa;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.cards > div {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #43594a;
+    border-radius: 14px;
+    background-color: #2a382e;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin: 0 0 22px;
+    color: #c5e6ce;
+    text-align: center;
+    font-size: 20px;
+}
+
+p {
+    margin: 12px 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.proxima {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2b3c30;
+    color: #c6e8ce;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    margin: 12px 0;
+    border: 1px solid #52675a;
+    border-radius: 8px;
+    background-color: #151c19;
+    color: #e8f0eb;
+    font: inherit;
+    color-scheme: dark;
+}
+
+button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8fc9a0;
+    color: #17251b;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #acdcb8;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #c5e6ce;
+    outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        gap: 16px;
+    }
+
+    body {
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .cards > div {
+        padding: 16px;
+    }
+}
